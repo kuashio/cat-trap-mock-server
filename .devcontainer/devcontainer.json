@@ -1,14 +1,15 @@
-{
-	"name": "Python 3",
+{	
+	"name": "Cat Trap Game Mock Server",
 	"build": {
 		"dockerfile": "Dockerfile",
-		"context": "..",
+		"context": ".",
 		"args": { 
 			"VARIANT": "3.10",      // Set Python version here
 			"NODE_VERSION": "lts/*"
 		}
 	},
 	"settings": { 
+		"python.pythonPath": "/usr/local/bin/python",
 		"python.defaultInterpreterPath": "/usr/local/bin/python",
 		"python.linting.enabled": true,
 		"python.linting.pylintEnabled": true,
@@ -23,10 +24,12 @@
 		"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
 		"python.linting.pylintArgs": ["--disable=C0111"]
 	},
+	"postCreateCommand": "pip install -r python-app/requirements.txt",
+	"remoteUser": "vscode",
+	"postStartCommand": "code --install-extension /workspace/extensions/cat-trap-game-ui-0.0.1.vsix",
 	"extensions": [
 		"ms-python.python",
 		"ms-python.vscode-pylance"
 	],
-	"remoteUser": "vscode",
-	"onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc" //Set Terminal Prompt to $
+	"onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc"
 }
