@@ -1,0 +1,4 @@
+websockets==10.1
+numpy==1.21.4  # Example, if you're using NumPy
+pandas==1.3.4  # Example, if you're using Pandas
+asyncio==3.4.3  # Example, if your project uses asyncio
