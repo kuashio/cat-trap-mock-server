@@ -2,7 +2,7 @@
 	"name": "Cat Trap Game Mock Server",
 	"build": {
 		"dockerfile": "Dockerfile",
-		"context": ".",
+		"context": "..",
 		"args": { 
 			"VARIANT": "3.10",      
 			"NODE_VERSION": "lts/*"
