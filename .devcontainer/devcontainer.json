@@ -26,7 +26,7 @@
 	},
 	"postCreateCommand": "pip install -r python-app/requirements.txt",
 	"remoteUser": "vscode",
-	"postStartCommand": "code --install-extension /workspaces/cat-trap-mock-server/extensions/cat-trap-game-ui-0.0.1.vsix",
+	"postStartCommand": "code --install-extension /workspaces/cat-trap-mock-server/extensions/cat-trap-game-ui-0.1.0.vsix",
 	"extensions": [
 		"ms-python.python",
 		"ms-python.vscode-pylance"
